@@ -1,23 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
+import { useGlobalContext } from "../context";
 
 const InputTodo = () => {
-  const [description, setDescription] = useState("");
+  const { description, setDescription, onSubmitForm } = useGlobalContext();
 
-  const onSubmitForm = async (e) => {
-    e.preventDefault();
-    try {
-      const body = { description };
-      const response = await fetch("http://localhost:5000/todos", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-
-      window.location = "/";
-    } catch (err) {
-      console.error(err.message);
-    }
-  };
   return (
     <Fragment>
       <h1 className="text-center text-3xl font-bold text-blue-600/100 p-4">
