@@ -6,7 +6,7 @@ import ListTodo from "./components/ListTodo";
 function App() {
   return (
     <Fragment>
-      <div className="flex flex-col h-80 justify-center items-center ">
+      <div className="flex flex-col lg:w-full md:w-48 justify-center items-center ">
         <InputTodo />
         <ListTodo />
       </div>

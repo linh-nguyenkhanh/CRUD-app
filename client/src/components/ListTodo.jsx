@@ -7,24 +7,24 @@ const ListTodo = () => {
   const { todos, deleteTodo } = useGlobalContext();
   return (
     <Fragment>
-      <table className="w-full text-center table-fixed m-2">
+      <table className="lg:w-full md:w-48 text-center table-fixed m-2">
         <thead>
           <tr className="odd:bg-gray-100 ">
             <th
               scope="col"
-              className="font-bold text-sm  text-gray-900 px-6 py-4"
+              className="font-bold lg:text-md md:text-sm text-sm  text-gray-900 px-6 py-4"
             >
               Description
             </th>
             <th
               scope="col"
-              className="font-bold text-sm text-gray-900 px-6 py-4 "
+              className="font-bold lg:text-md md:text-sm text-gray-900 px-6 py-4 "
             >
               Edit
             </th>
             <th
               scope="col"
-              className="font-bold text-sm text-gray-900  px-6 py-4 "
+              className="font-bold lg:text-md md:text-sm text-gray-900  px-6 py-4 "
             >
               Delete
             </th>
