@@ -1,21 +1,22 @@
 import React, { Fragment, useEffect, useState } from "react";
 
+import EditTodo from "./EditTodo";
+
 const ListTodo = () => {
   const [todos, setTodos] = useState([]);
 
   // delete func
-
   const deleteTodo = async (id) => {
     try {
       const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
         method: "DELETE",
       });
-      console.log(deleteTodo);
+      setTodos(todos.filter((todo) => todo.todo_id !== id));
     } catch (err) {
       console.error(err.message);
     }
   };
-
+  // get func
   const getTodo = async () => {
     try {
       const response = await fetch("http://localhost:5000/todos");
@@ -30,6 +31,7 @@ const ListTodo = () => {
   useEffect(() => {
     getTodo();
   }, []);
+
   return (
     <Fragment>
       <table className="w-full text-center table-fixed m-2">
@@ -61,14 +63,13 @@ const ListTodo = () => {
             <tr key={todo.todo_id} className="p-2 border-b text-left">
               <td className="text-center">{todo.description}</td>
               <td className="text-center">
-                <button className="text-white text-md bg-green-500 rounded-sm px-3 py-1">
-                  Edit
-                </button>
+                <EditTodo todo={todo} />
               </td>
               <td className="text-center">
                 <button
-                  onClick={deleteTodo}
-                  className="text-white text-md bg-red-500 rounded-sm px-3 py-1"
+                  onClick={() => deleteTodo(todo.todo_id)}
+                  className="text-white text-md bg-red-500
+                    hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                 >
                   Delete
                 </button>

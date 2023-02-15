@@ -23,6 +23,7 @@ const InputTodo = () => {
       <h1 className="text-center text-3xl font-bold text-blue-600/100 p-4">
         PERN Todo List
       </h1>
+      {description.length < 0 && <div>"Please add something to-do"</div>}
       <form onSubmit={onSubmitForm}>
         <input
           onChange={(e) => setDescription(e.target.value)}
