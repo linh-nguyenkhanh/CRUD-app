@@ -1,6 +1,6 @@
 # CRUD_project with PERN stack: Postgres, Express, React, and Node 
 
-# Link tutorial: https://www.youtube.com/watch?v=ldYcgPKEZC8
+- Link tutorial: https://www.youtube.com/watch?v=ldYcgPKEZC8
 
 - I do this project to learn about how to work with Postgres SQL database.Also, I learn more clearly about using ExpessJS with Node for the server-side and for the client-side, I practice smoothly using React hooks and components. 
 
