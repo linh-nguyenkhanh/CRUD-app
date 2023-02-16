@@ -6,3 +6,5 @@
 
 - I have modified my project for my preference way of learning, try to avoid tutorial hell. 
 - In the tutorial, instructor used "Passing Props to a Component" method, but I use createContext and useContext hooks, so contexts let components pass information without explicitly passing props. I use Tailwindcss for styling, instead of using Bootstraps as intructor used. 
+
+- Try this todo list: https://pern-todo-list.netlify.app/
