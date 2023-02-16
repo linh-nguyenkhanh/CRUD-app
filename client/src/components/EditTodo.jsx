@@ -39,8 +39,6 @@ const EditTodo = ({ todo }) => {
       {/* modal */}
       {showModal ? (
         <div className="backdrop-blur-sm flex justify-center items-center overflow-x-hidden overflow-y-auto fixed  inset-0 outline-none focus:outline-none">
-          {/* close icon */}
-
           <div
             id={`id${todo.todo_id}`}
             className="relative w-auto my-6 mx-auto max-w-3xl"
@@ -48,17 +46,17 @@ const EditTodo = ({ todo }) => {
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
                 <h3 className="text-xl font=semibold">Edit Todo</h3>
+                {/* close icon */}
                 <button type="button" onClick={() => setShowModal(false)}>
                   &times;
                 </button>
               </div>
-
-              {/* input change when use form tag */}
-              <form className="relative p-6 flex-auto">
+              {/* input change when use <form> tag */}
+              <form className="relative p-6 flex-auto ">
                 <input
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  className="shadow appearance-none border rounded w-full py-3 px-1 text-black"
+                  className="shadow-2xl appearance-none border rounded w-full py-3 px-1 text-black"
                 />
               </form>
               <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">

@@ -9,22 +9,22 @@ const ListTodo = () => {
     <Fragment>
       <table className="lg:w-full md:w-48 text-center table-fixed m-2">
         <thead>
-          <tr className="odd:bg-gray-100 ">
+          <tr className="bg-white text-black underline decoration-4 decoration-purple-400">
             <th
               scope="col"
-              className="font-bold lg:text-md md:text-sm text-sm  text-gray-900 px-6 py-4"
+              className="font-bold lg:text-lg md:text-sm text-sm px-6 py-4 "
             >
               Description
             </th>
             <th
               scope="col"
-              className="font-bold lg:text-md md:text-sm text-gray-900 px-6 py-4 "
+              className="font-bold lg:text-lg md:text-sm  px-6 py-4 "
             >
               Edit
             </th>
             <th
               scope="col"
-              className="font-bold lg:text-md md:text-sm text-gray-900  px-6 py-4 "
+              className="font-bold lg:text-lg md:text-sm   px-6 py-4 "
             >
               Delete
             </th>
@@ -33,12 +33,20 @@ const ListTodo = () => {
 
         <tbody>
           {todos.map((todo) => (
-            <tr key={todo.todo_id} className="p-2 border-b text-left">
-              <td className="text-center">{todo.description}</td>
-              <td className="text-center">
+            <tr
+              key={todo.todo_id}
+              className="p-2 border-b text-left odd:bg-white even:bg-slate-50 "
+            >
+              <td
+                className="text-center 
+"
+              >
+                {todo.description}
+              </td>
+              <td className="text-center ">
                 <EditTodo todo={todo} />
               </td>
-              <td className="text-center">
+              <td className="text-center bg-white">
                 <button
                   onClick={() => deleteTodo(todo.todo_id)}
                   className="text-white text-md bg-red-500
