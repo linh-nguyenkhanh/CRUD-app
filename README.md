@@ -6,4 +6,4 @@ I do this project to learn about how to work with Postgres SQL database.Also, I 
 
 I have modified my project for my preference way of learning, try to avoid tutorial hell. 
 
-In the tutorial, instructor used "Passing Props to a Component", but I use createContext and useContext hooks. I use Tailwindcss for styling, instead of using Bootstraps as intructor used. 
+In the tutorial, instructor used "Passing Props to a Component" method, but I use createContext and useContext hooks. I use Tailwindcss for styling, instead of using Bootstraps as intructor used. 
