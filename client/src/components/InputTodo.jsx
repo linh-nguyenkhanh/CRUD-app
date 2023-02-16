@@ -17,7 +17,7 @@ const InputTodo = () => {
           placeholder="Enter a todo..."
           className="placeholder-shown:border-gray-500 rounded-md border-2 px-4 py-2 mr-3 lg:w-64 md:w-32 "
         />
-        <button className=" px-5 py-2 text-lg font-bold bg-purple-500 text-white rounded-lg">
+        <button className=" px-5 py-2 text-lg font-bold bg-purple-500 text-white rounded-lg shadow-xl">
           Add
         </button>
       </form>

@@ -38,7 +38,7 @@ const ListTodo = () => {
               className="p-2 border-b text-left odd:bg-white even:bg-slate-50 "
             >
               <td
-                className="text-center 
+                className="text-center hover:bg-yellow-100
 "
               >
                 {todo.description}
@@ -46,7 +46,7 @@ const ListTodo = () => {
               <td className="text-center ">
                 <EditTodo todo={todo} />
               </td>
-              <td className="text-center bg-white">
+              <td className="text-center">
                 <button
                   onClick={() => deleteTodo(todo.todo_id)}
                   className="text-white text-md bg-red-500
